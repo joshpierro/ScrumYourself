@@ -1,0 +1,16 @@
+﻿.panel-content {
+    margin: 10px;
+    padding: 10px;
+}
+
+.sub-panel-content {
+    margin: 10px;
+}
+
+.project-dates {
+       top:25px;
+    right: 20px;
+ 
+    position: absolute;
+}
+
