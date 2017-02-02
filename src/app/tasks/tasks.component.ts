@@ -3,11 +3,7 @@ import {TasksService} from '../tasks.service';
 
 @Component({
   selector: 'app-tasks',
-  template: `
-  <md-list *ngFor="let task of tasksService.tasks">
-  <md-list-item>{{task}}</md-list-item>
-</md-list>
-  `,
+  templateUrl: './tasks.component.html',
   styles: []
 })
 export class TasksComponent implements OnInit {
@@ -18,6 +14,10 @@ export class TasksComponent implements OnInit {
 
   ngOnInit() {
 
+  }
+
+  getTask(task){
+    console.log(task)
   }
 
 }
