@@ -9,10 +9,12 @@ import { AppComponent } from './app.component';
 import { TasksComponent } from './tasks/tasks.component';
 import {TasksService} from './tasks.service';
 import { TaskComponent } from './task/task.component';
+import { AddTaskComponent } from './add-task/add-task.component';
 
 const routes =[
   {path:'',component:TasksComponent},
-  {path:'task/:taskId',component:TaskComponent}
+  {path:'task/:taskId',component:TaskComponent},
+  {path:'addtask',component:AddTaskComponent}
   ]
 
 
@@ -20,7 +22,8 @@ const routes =[
   declarations: [
     AppComponent,
     TasksComponent,
-    TaskComponent
+    TaskComponent,
+    AddTaskComponent
   ],
   imports: [
     BrowserModule,
@@ -32,4 +35,6 @@ const routes =[
   providers: [TasksService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}
