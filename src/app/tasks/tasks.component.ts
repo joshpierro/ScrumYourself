@@ -1,23 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import {TasksService} from '../tasks.service';
 
 @Component({
   selector: 'app-tasks',
   templateUrl: './tasks.component.html',
-  styles: []
+  styleUrls: ['./tasks.component.css']
 })
+
 export class TasksComponent implements OnInit {
 
-  constructor(private tasksService:TasksService)  {
+  @Input() area:string;
+  service;
 
+  constructor(private tasksService:TasksService)  {
+    this.service = tasksService;
   }
 
   ngOnInit() {
-
   }
 
-  getTask(task){
-    console.log(task)
-  }
 
 }

@@ -2,11 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-add-task',
-  template: `
-    <p>
-      add a task here
-    </p>
-  `,
+  templateUrl: `./add-task.component.html`,
   styles: []
 })
 export class AddTaskComponent implements OnInit {

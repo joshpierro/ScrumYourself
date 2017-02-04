@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Router} from "@angular/router";
+import {TasksService} from "./tasks.service";
 
 
 @Component({
@@ -9,9 +10,9 @@ import {Router} from "@angular/router";
 })
 export class AppComponent {
   title = 'scrumyourself.com';
-  area = 'list';
-  constructor(private router: Router) { }
+  area='list';
 
-
+  constructor(private router: Router,private tasksService:TasksService) {
+  }
 
 }

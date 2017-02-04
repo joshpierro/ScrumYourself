@@ -14,12 +14,15 @@ export class TaskComponent implements OnInit {
   private routeParam: any;
   private tasks: any;
 
+
   constructor(private route: ActivatedRoute,private tasksService:TasksService) {
     this.tasks = tasksService.tasks;
   }
 
-
   ngOnInit() {
+
+
+
     this.routeParam = this.route.params.subscribe(params => {
       let taskId = +params['taskId']; // (+) converts string 'id' to a number
 

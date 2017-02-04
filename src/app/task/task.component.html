@@ -1,4 +1,3 @@
-
 <md-card>
   <md-card-title>
     {{task.task}}
@@ -8,5 +7,16 @@
     </md-card-subtitle>
   <md-card-content>
     {{task.description}}
+
+
+    <md-grid-list cols="4" rowHeight="75">
+      <md-grid-tile colspan="3"></md-grid-tile>
+      <md-grid-tile>
+        <button md-raised-button routerLink="">
+          back
+        </button>
+      </md-grid-tile>
+    </md-grid-list>
+
     </md-card-content>
 </md-card>
