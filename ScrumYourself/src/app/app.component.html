@@ -1,7 +1,18 @@
 <mat-toolbar color="primary">
-
-<div fxLayout="row">
-  <span fxFlex="90">ScrumYourself</span>
-  <span fxFlex="10">i</span>
+<div fxFlex fxLayout="row">
+  <div fxFlex="90">ScrumYourself</div>
+  <div fxFlex="10">
+    <i class="material-icons"
+       routerLink="/me"
+       *ngIf="path!=='/me'">
+      perm_identity
+    </i>
+    <i class="material-icons"
+       routerLink="/"
+       *ngIf="path!=='/'">
+      home
+    </i>
+  </div>
 </div>
 </mat-toolbar>
+<router-outlet></router-outlet>
