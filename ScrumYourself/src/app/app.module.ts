@@ -1,6 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatCardModule} from '@angular/material/card';
 import {NgModule} from '@angular/core';
 import {RouterModule,Routes} from '@angular/router';
 
@@ -8,6 +9,7 @@ import {RouterModule,Routes} from '@angular/router';
 import {AppComponent} from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
+import {ProfileService} from "./profile.service";
 
 const appRoutes: Routes = [
   { path: '',
@@ -29,10 +31,11 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FlexLayoutModule,
+    MatCardModule,
     MatToolbarModule,
     RouterModule.forRoot(appRoutes, { enableTracing: false })
   ],
-  providers: [],
+  providers: [ProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
