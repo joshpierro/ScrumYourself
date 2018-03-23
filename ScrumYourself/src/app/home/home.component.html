@@ -1,4 +1,17 @@
-
 <mat-card class="scrum-card-container">
-  stuff
+    <mat-card-header fxLayout="row">
+        <span fxFlex="80">
+          <button mat-raised-button>Add Task</button>
+        </span>
+        <span fxFlex="20">
+          <strong>Capacity : </strong> {{this.profile.capacity}}
+        </span>
+    </mat-card-header>
+
+   <mat-card-content class="scrum-list">
+     <div fxFlex *ngFor="let task of tasks" (click)="onSelect(hero)">
+       {{task.name}}
+     </div>
+  </mat-card-content>
+
 </mat-card>
